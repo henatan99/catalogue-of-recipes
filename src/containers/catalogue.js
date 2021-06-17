@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import Category from '../components/category';
-import SearchForm from './searchForm';
 
-const Catalogue = ( {categories, filter, changeFilter} ) => {
-  const filterChange = ({ target: { value } }) => changeFilter(value); 
-  const { categoryName, categoryImage, recipes} = categories;
-  
+const Catalogue = ( {categories, filter} ) => { 
   return (
     <div>
-      <SearchForm handleFilterChange={(e) => { filterChange(e); }}/>
-      <Category />
+      {categories.filter((mealCategory) => mealCategory.category === filter || filter === 'recipes').map(
+        (mealCategory) => (
+          <Category mealCategory={mealCategory}/>
+        )
+      )}
     </div>
   )
 };

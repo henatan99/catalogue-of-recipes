@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Category = ( {catgoryImage, catageoryName, likes} ) => (
   <div className="category-div">
@@ -7,5 +8,11 @@ const Category = ( {catgoryImage, catageoryName, likes} ) => (
     <span className="recipe-num">{likes} recipes</span>
   </div>
 );
+
+Category.propTypes = {
+  catgoryImage: PropTypes.objectOf(PropTypes.any).isRequired,
+  catageoryName: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired
+};
 
 export default Category;

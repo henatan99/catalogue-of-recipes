@@ -1,4 +1,5 @@
 import '../App.css';
+import Catalogue from '../containers/catalogue';
 import NavBar from './navBar';
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
+      <main>
+        <Catalogue />
+      </main>
     </div>
   );
 }

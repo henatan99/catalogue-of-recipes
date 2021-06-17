@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Category = ( {catgory} ) => (
-  <div className="category-div">
+  <Link to='/Meal' >
     <img className="category-img" src={category.image} alt="category-img"/>
     <h2 className="recipe">{category.name}</h2>
     <span className="recipe-num">{category.recipes} recipes</span>
-  </div>
+  </Link>
 );
 
 Category.propTypes = {

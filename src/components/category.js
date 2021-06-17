@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Category = ( {catgoryImage, catageoryName, recipes} ) => (
+const Category = ( {catgory} ) => (
   <div className="category-div">
-    <img className="category-img" src={catgoryImage} alt="category-img"/>
-    <h2 className="recipe">{catageoryName}</h2>
-    <span className="recipe-num">{recipes} recipes</span>
+    <img className="category-img" src={category.image} alt="category-img"/>
+    <h2 className="recipe">{category.name}</h2>
+    <span className="recipe-num">{category.recipes} recipes</span>
   </div>
 );
 
 Category.propTypes = {
-  catgoryImage: PropTypes.objectOf(PropTypes.any).isRequired,
-  catageoryName: PropTypes.string.isRequired,
-  recipes: PropTypes.number.isRequired
+  catgory: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Category;

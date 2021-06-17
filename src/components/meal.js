@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Meal = ( {mealName, mealImage, likes} ) => (
     <div>
@@ -22,12 +22,16 @@ const Meal = ( {mealName, mealImage, likes} ) => (
                     <span>Favorite</span>
                 </li>
                 <li>
-                    <span class="iconify" data-icon="ant-design:heart-filled" data-inline="false"></span>
-                    <span>Recommend</span>
+                    <button>
+                        <span class="iconify" data-icon="ant-design:heart-filled" data-inline="false"></span>
+                    </button>
+                    <button>Recommend</button>
                 </li>
                 <li>
-                    <span class="iconify" data-icon="fa-solid:share-square" data-inline="false"></span>
-                    <span>Share</span>
+                    <a>
+                        <span class="iconify" data-icon="fa-solid:share-square" data-inline="false"></span>
+                    </a>                    
+                    <a>Share</a>
                 </li>
             </ul>
         </footer>

@@ -1,9 +1,16 @@
 /* eslint-disable */
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Category from '../components/category';
+import { useEffect } from 'react';
+import { fetchCategories } from '../actions/index';
 
-const Catalogue = ({ categories }) => {
+const Catalogue = () => {
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state);
+  useEffect(()=> {
+    dispatch(fetchCategories());
+  }, []);
   return (
     <div>
       {categories.map((category) => (

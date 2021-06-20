@@ -1,17 +1,17 @@
 import http from './baseHttp';
 
 class recipesApiService {
-    getAll() {
-        return http.get('/categories.php');
-    }
-    
-    get(id) {
-        return http.get(`/lookup.php?i=${id}`);
-    }
+  getAll() {
+    return http.get('/categories.php');
+  }
 
-    findByName(name) {
-        return http.get(`/search.php?s=${name}`)
-    }
+  get(id) {
+    return http.get(`/lookup.php?i=${id}`);
+  }
+
+  findByName(name) {
+    return http.get(`/search.php?s=${name}`);
+  }
 }
 
-export default new recipesApiService
+export default new recipesApiService();

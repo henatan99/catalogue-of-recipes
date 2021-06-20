@@ -6,9 +6,6 @@ import NavBar from './components/navBar';
 import MealPage from './routes/MealPage';
 import SearchForm from './containers/searchForm';
 
-store.subscribe(() => {console.log(store.getState())});
-store.dispatch(fetchUsers());
-
 function App() {
   return (
     <Router>

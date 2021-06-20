@@ -5,7 +5,11 @@ import configureStore from './store/configureStore';
 import './index.css';
 import App from './App';
 
-const initialState = {};
+const initialState = {
+  loading: false,
+  categories: [],
+  error: '',
+};
 const store = configureStore(initialState);
 
 ReactDOM.render(

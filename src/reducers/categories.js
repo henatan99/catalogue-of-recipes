@@ -8,9 +8,16 @@ export default function (state = initialState, action) {
         loading: true,
       }
     case FETCH_CATEGORIES_SUCCESS:
-      loading: false
-      categories: data
+      return {
+        loading: false,
+        categories: action.payload,
+        error: '',
+      }
     case FETCH_CATEGORIES_FAILURE:
+      return {
+        categories: [],
+        error: action.payload,
+      }
     default:
       return state;
   }

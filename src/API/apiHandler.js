@@ -1,16 +1,20 @@
-export const fetchAPI = (key) => {
-  const obj = {};
-  const fetchApi = async () => {
-    const response = await fetch(key, { mode: 'cors' });
-    if (response.status === 200) {
-      const data = await response.json();
-      obj.data = data;
-    }
-    throw Error(404);
-  };
-  fetchApi();
-  return obj;
-};
+import axios from "axios";
+import { fetchCategoriesFailure, fetchCategoriesSuccess } from "../actions";
+import categories from "../reducers/categories";
+
+const fetchCategories = () => {
+  return function(dispatch) {
+    dispatch(fetchCategoriesRequest);
+    axios.get(`${baseAPI}/categories.php`)
+    .then(response => {
+      const categories = response.categories.map(category => category);
+      dispatch(fetchCategoriesSuccess(categories));
+    })
+    .catch(error => {
+      dispatch(fetchCategoriesFailure(error.message));
+    })
+  }
+}
 
 const baseAPI = 'https://www.themealdb.com/api/json/v1/1';
 const searchMealByName = (mealName) => fetchAPI(`${baseAPI}/search.php?s=${mealName}`).then((value) => value);

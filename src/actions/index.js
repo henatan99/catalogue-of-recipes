@@ -12,7 +12,7 @@ export const countLikes = (meal) => ({
   meal,
 });
 
-export const fetchCategories = () => ({
+export const fetchCategoriesRequest = () => ({
   type: FETCH_CATEGORIES,
 })
 

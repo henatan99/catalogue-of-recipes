@@ -1,9 +1,12 @@
 import { CHANGE_FILTER } from '../actions/actionTypes';
 
-export default function (state = 'All', action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_CATEGORIES:
-      loading: true;
+      return {
+        ...state,
+        loading: true,
+      }
     case FETCH_CATEGORIES_SUCCESS:
       loading: false
       categories: data

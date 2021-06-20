@@ -3,7 +3,7 @@ import rootReducer from '../reducers';
 
 const initialState = {
   loading: false,
-  categories: data,
+  categories: [],
   error: '',
 }
 

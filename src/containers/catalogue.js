@@ -2,13 +2,8 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Category from '../components/category';
-import { fetchAPI, apiActions } from '../API/apiHandler';
 
-const Catalogue = ({ filter }) => {
-  const categoryObj = apiActions.LIST_ALL_MEAL_CATEGORIES;
-  const result = categoryObj();
-  console.log(result);
-  const categories = result.data.categories;
+const Catalogue = ({ categories }) => {
   return (
     <div>
       {categories.map((category) => (

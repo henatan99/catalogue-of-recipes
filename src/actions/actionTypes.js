@@ -1,2 +1,5 @@
 export const CHANGE_FILTER = 'CHANGE_FILTER';
 export const COUNT_LIKES = 'COUNT_LIKES';
+export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
+export const FETCH_MEALS = 'FETCH_MEALS';
+

@@ -1,12 +1,12 @@
-import React from 'react'
-import Catalogue from '../containers/catalogue'
+import React from 'react';
+import Catalogue from '../containers/catalogue';
 
 function Home() {
-    return (
-        <main>
-          <Catalogue />
-        </main>
-    );
+  return (
+    <main>
+      <Catalogue />
+    </main>
+  );
 }
 
-export default Home
+export default Home;

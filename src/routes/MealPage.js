@@ -1,12 +1,12 @@
-import React from 'react'
-import Meal from '../components/meal'
+import React from 'react';
+import Meal from '../components/meal';
 
 function MealPage() {
-    return (
-        <main>
-          <Meal />
-        </main>
-    );
+  return (
+    <main>
+      <Meal />
+    </main>
+  );
 }
 
-export default MealPage
+export default MealPage;

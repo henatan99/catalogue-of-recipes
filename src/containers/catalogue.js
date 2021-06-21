@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 import Category from '../components/category';
 import { fetchCategories, changeFilter } from '../actions/index';
 
-// import filterChange from '../actions';
-
 const Catalogue = ({ changeFilter }) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);

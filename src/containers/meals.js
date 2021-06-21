@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
-// import PropTypes from 'prop-types';
 import { fetchMeals } from '../actions';
 import Meal from '../components/meal';
 
@@ -20,9 +19,7 @@ const Meals = () => {
       <Meal
         name={meal.strMeal}
         image={meal.strMealThumb}
-        // recipes={5}
         key={meal.idMeal}
-        // handleFilterChange={() => changeFilter(category.strCategory)}
       />
     ));
   };
@@ -30,10 +27,6 @@ const Meals = () => {
     <div>{ renderMeals() }</div>
   );
 };
-
-// Meals.propTypes = {
-//   category: PropTypes.string.isRequired,
-// };
 
 const mapStateToProps = (state) => ({
   meals: state.meals,

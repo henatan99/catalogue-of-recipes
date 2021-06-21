@@ -6,10 +6,13 @@ import './index.css';
 import App from './App';
 
 const initialState = {
-  loading: false,
-  categories: [],
-  error: '',
+  categories: {
+    loading: false,
+    items: [],
+    error: null,
+  },
 };
+
 const store = configureStore(initialState);
 
 ReactDOM.render(

@@ -1,37 +1,38 @@
-/* eslint-disable */
 import { connect, useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import Category from '../components/category';
 import { useEffect } from 'react';
-import { fetchCategories } from '../actions/index';
+import Category from '../components/category';
+import fetchCategories from '../actions/index';
 
 const Catalogue = () => {
   const dispatch = useDispatch();
-  const categories = useSelector((state) => state);
-  useEffect(()=> {
+  const state = useSelector((state) => state);
+  console.log(state);
+  useEffect(() => {
     dispatch(fetchCategories());
   }, []);
-  return (
-    <div>
-      {categories.map((category) => (
-        <Category
-          name={category.strCategory}
-          image={category.strCategoryThumb}
-          recipes={5}
-          key={filter}
-        />
-      ))}
-    </div>
-  );
-};
 
-Catalogue.propTypes = {
-  filter: PropTypes.string.isRequired,
+  const renderCategories = () => {
+    if (state.categories.loading) {
+      return <h1>loading...</h1>;
+    }
+
+    return state.categories.items.map((category) => (
+      <Category
+        name={category.strCategory}
+        image={category.strCategoryThumb}
+        recipes={5}
+        key={category.idCategory}
+      />
+    ));
+  };
+
+  return (
+    <div>{ renderCategories() }</div>
+  );
 };
 
 const mapStateToProps = (state) => ({
   categories: state.categories,
-  filter: state.filter,
 });
 
 export default connect(mapStateToProps)(Catalogue);

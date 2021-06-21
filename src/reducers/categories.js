@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: false,
-  categories: [],
+  items: [],
   error: '',
 };
 
@@ -22,13 +22,13 @@ export default function (state = initialState, action) {
       return {
         ...state,
         loading: false,
-        categories: action.payload,
+        items: action.payload,
         error: '',
       };
     case FETCH_CATEGORIES_FAILURE:
       return {
         ...state,
-        categories: [],
+        items: [],
         error: action.payload,
       };
     default:

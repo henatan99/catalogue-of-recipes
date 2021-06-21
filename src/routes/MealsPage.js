@@ -1,5 +1,5 @@
 import React from 'react';
-import Meals from '../components/meals';
+import Meals from '../containers/meals';
 
 function MealsPage() {
   return (

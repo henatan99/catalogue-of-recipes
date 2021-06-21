@@ -37,6 +37,20 @@ export const fetchMeals = (category) => async (dispatch) => {
   }
 };
 
+export const searchMeals = (mealName) => async (dispatch) => {
+  dispatch({ type: SEARCH_MEALS_REQUEST });
+
+  try {
+    const response = await axios.get(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`,
+    );
+
+    dispatch({ type: SEARCH_MEALS_SUCCESS, payload: response.data.meals });
+  } catch (error) {
+    dispatch({ type: SEARCH_MEALS_FAILURE }, error);
+  }
+};
+
 export const changeFilter = (category) => ({
   type: CHANGE_FILTER,
   payload: category,

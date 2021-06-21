@@ -6,7 +6,11 @@ import {
   FETCH_MEALS_REQUEST,
   FETCH_MEALS_SUCCESS,
   FETCH_MEALS_FAILURE,
+  SEARCH_MEALS_REQUEST,
+  SEARCH_MEALS_SUCCESS,
+  SEARCH_MEALS_FAILURE,
   CHANGE_FILTER,
+  CHANGE_SEARCH,
 } from './actionTypes';
 
 export const fetchCategories = () => async (dispatch) => {
@@ -54,4 +58,9 @@ export const searchMeals = (mealName) => async (dispatch) => {
 export const changeFilter = (category) => ({
   type: CHANGE_FILTER,
   payload: category,
+});
+
+export const changeSearch = (search) => ({
+  type: CHANGE_SEARCH,
+  payload: search,
 });

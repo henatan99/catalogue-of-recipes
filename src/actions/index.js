@@ -3,9 +3,10 @@ import {
   FETCH_CATEGORIES_REQUEST,
   FETCH_CATEGORIES_SUCCESS,
   FETCH_CATEGORIES_FAILURE,
+  CHANGE_FILTER,
 } from './actionTypes';
 
-const fetchCategories = () => async (dispatch) => {
+export const fetchCategories = () => async (dispatch) => {
   dispatch({ type: FETCH_CATEGORIES_REQUEST });
 
   try {
@@ -19,4 +20,7 @@ const fetchCategories = () => async (dispatch) => {
   }
 };
 
-export default fetchCategories;
+export const changeFilter = (category) => ({
+  type: CHANGE_FILTER,
+  payload: category,
+});

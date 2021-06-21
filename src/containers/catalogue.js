@@ -1,9 +1,12 @@
+import PropTypes from 'prop-types';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Category from '../components/category';
-import fetchCategories from '../actions/index';
+import { fetchCategories, changeFilter } from '../actions/index';
 
-const Catalogue = () => {
+// import filterChange from '../actions';
+
+const Catalogue = ({ changeFilter }) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   console.log(state);
@@ -22,6 +25,7 @@ const Catalogue = () => {
         image={category.strCategoryThumb}
         recipes={5}
         key={category.idCategory}
+        handleFilterChange={() => changeFilter(category.strCategory)}
       />
     ));
   };
@@ -31,8 +35,16 @@ const Catalogue = () => {
   );
 };
 
+Catalogue.propTypes = {
+  changeFilter: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  changeFilter: (category) => dispatch(changeFilter(category)),
+});
+
 const mapStateToProps = (state) => ({
   categories: state.categories,
 });
 
-export default connect(mapStateToProps)(Catalogue);
+export default connect(mapStateToProps, mapDispatchToProps)(Catalogue);

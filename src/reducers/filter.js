@@ -1,9 +1,13 @@
 import { CHANGE_FILTER } from '../actions/actionTypes';
 
-export default function (state = 'LIST_ALL_MEAL_CATEGORIES', action) {
+// const initialState = {
+//   category: 'Beef',
+// };
+
+export default function (state = 'Beef', action) {
   switch (action.type) {
     case CHANGE_FILTER:
-      return action.category;
+      return action.payload;
     default:
       return state;
   }

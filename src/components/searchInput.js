@@ -1,20 +1,30 @@
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import changeSearch from '../actions/index';
+import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { changeSearch } from '../actions/index';
 
-const SearchInput = () => {
-  const [search, setSearch] = useState(null);
+const SearchInput = ({ changeSearch }) => {
+  const [search, setSearch] = useState('');
+  let history = useHistory();
+  
+  const handleSubmit = () => {
+    history.push("/SearchResult");
+  }
 
   const handleChange = (e) => {
-    setSearch(e.target.value);
-    changeSearch(search);
+    setSearch(e.target.value ? e.target.value : '');
+    console.log(changeSearch(search) ? changeSearch(search) : 'Yaya');
   };
 
   return (
-    <input
-      type="text"
-      value={search}
-      onChange={handleChange}
-    />
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={search || ''}
+        onChange={handleChange}
+      />
+    </form>
   );
 };
 

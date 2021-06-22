@@ -15,8 +15,8 @@ function App() {
         <SearchInput />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Meals" component={MealsPage} />
-          <Route path="/SearchResult" component={SearchResultPage}></Route>
+          <Route path="/Meals/:id" component={MealsPage} />
+          <Route path="/SearchResult/:id" component={SearchResultPage} />
         </Switch>
       </div>
     </Router>

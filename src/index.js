@@ -12,6 +12,8 @@ const initialState = {
     items: [],
     error: null,
   },
+  filter: 'Beef',
+  search: 'Pie',
 };
 
 const store = configureStore(initialState);

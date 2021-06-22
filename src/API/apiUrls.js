@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const baseAPI = 'https://www.themealdb.com/api/json/v1/1';
 
 // const searchMealByName = (mealName) => fetchAPI(`${baseAPI}/search.php?s=${mealName}`).then((value) => value);

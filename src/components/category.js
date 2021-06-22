@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Category = ({
   name, image, recipes, handleFilterChange,
 }) => (
-  <Link to="/Meals" onClick={handleFilterChange}>
+  <Link to={`/Meals/${name}`} onClick={handleFilterChange}>
     <img className="category-img" src={image} alt="category-img" />
     <h2 className="recipe">{name}</h2>
     <span className="recipe-num">

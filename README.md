@@ -14,7 +14,7 @@ The webapp has 3 types of pages:
 ![Screenshot](docs/search.png)
 
 ## Live demo [Heroku]
-[Book Store App](https://hen-book-store.herokuapp.com/)
+[Catalogue of Recipes](https://hen-recipes.herokuapp.com/)
 
 ## Built With
 

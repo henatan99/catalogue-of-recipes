@@ -7,12 +7,14 @@ const Category = ({
 }) => (
   <Link to={`/Meals/${name}`} className="card" onClick={handleFilterChange}>
     <img className="category-img card-img" src={image} alt="category-img" />
-    <h2 className="recipe card-title">{name}</h2>
-    <span className="recipe-num card-span">
-      {recipes}
-      {' '}
-      recipes
-    </span>
+    <div className="card-info">
+      <h2 className="recipe card-title">{name}</h2>
+      <span className="recipe-num card-span">
+        {recipes}
+        {' '}
+        recipes
+      </span>
+    </div>
   </Link>
 );
 

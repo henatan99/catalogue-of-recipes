@@ -7,7 +7,6 @@ import { fetchCategories, changeFilter } from '../actions/index';
 const Catalogue = ({ changeFilter }) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  console.log(state.filter);
   useEffect(() => {
     dispatch(fetchCategories());
   }, []);

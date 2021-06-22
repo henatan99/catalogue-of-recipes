@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 import Meals from '../containers/meals';
 
 function MealsPage() {
-  const { id } = useParams();
-  console.log(id);
+  useParams();
   return (
     <main className="main-container">
       <Meals />

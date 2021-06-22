@@ -11,6 +11,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10%;
 }
 
 .nav-bar {
@@ -41,7 +42,7 @@ a {
 /* ----------------------- */
 .main-container {
   width: 80%;
-  background-color: #ccc;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,6 +72,10 @@ a {
 .search-input {
   width: 98%;
   height: 40px;
+  border-radius: 20px;
+  appearance: none;
+  font-size: 20px;
+  padding: 0 1rem 0 1rem;
 }
 
 /* --------------------- */
@@ -86,10 +91,19 @@ a {
   width: 100%;
 }
 
+.card-info {
+  background-color: #ccc;
+  padding: 1rem 0 1rem 0;
+}
+
 .card-title {
   width: 100%;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+  padding-left: 1rem;
 }
 
 .card-span {
   width: 100%;
+  padding-left: 1rem;
 }

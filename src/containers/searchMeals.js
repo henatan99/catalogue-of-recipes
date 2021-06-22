@@ -12,8 +12,6 @@ const SearchMeals = ({ searchName }) => {
     dispatch(searchMeals(searchName));
   }, []);
 
-  console.log(`current state search is ${searchName} but should be ${state.search} and filter is ${state.filter}`);
-
   const renderMeals = () => {
     if (state.meals.loading) {
       return <h1>loading...</h1>;

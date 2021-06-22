@@ -2,6 +2,7 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
 .root {
   text-align: center;
   position: relative;
@@ -81,7 +82,7 @@ a {
 /* --------------------- */
 
 .card {
-  width: 100%;  
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -13,9 +13,28 @@ The webapp has 3 types of pages:
 ## Meals of  Common Search Key
 ![Screenshot](docs/search.png)
 
-# Getting Started with Create React App
+## Live demo [Heroku]
+[Book Store App](https://hen-book-store.herokuapp.com/)
 
+## Built With
+
+- `Node.js` | `React` | `React-DOM` | `React-Create-App` | `Hooks` | `Routes` 
+- `Redux` | `MiidleWares` | `Backend API` | `npm` | `CSS` | `ES6` 
+
+# Getting Started
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## SetUp 
+- Clone the repository 
+`git clone git@github.com:henatan99/catalogue-of-recipes.git`
+
+- cd to the project directory 
+`cd catalogue-of-recipes`
+
+- Install dependancies 
+`npm install`
+
+- And follow the App Usage instructions in the next section
 
 ## Available Scripts
 
@@ -83,3 +102,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Prerequisites
+
+- Node.JS
+
+## Authors
+
+👤 **Henok Mossissa**
+
+- GitHub: [@henatan99](https://github.com/henatan99)
+- Twitter: [@henatan99](https://twitter.com/henatan99)
+- LinkedIn: [Henok Mossissa](https://www.linkedin.com/in/henok-mekonnen-2a251613/)
+
+## :handshake: Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a :star:️ if you like this project!
+
+## Acknowledgment 
+
+- Facebook team who created creat-react-app API 
+- [Zeplin project](https://app.zeplin.io/projects)
+
+## :memo: License
+
+This project is [MIT](./LICENSE) licensed.

@@ -6,7 +6,7 @@ function SearchResultPage() {
   const { id } = useParams();
   console.log(id);
   return (
-    <main>
+    <main className="main-container">
       <SearchMeals searchName={id} />
     </main>
   );

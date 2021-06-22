@@ -20,13 +20,16 @@ const SearchInput = ({ changeFilter }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={search}
-        onChange={handleChange}
-      />
-    </form>
+    <div className="form-wrapper">
+      <form className="search-form" onSubmit={handleSubmit}>
+        <input
+          className="search-input"
+          type="text"
+          value={search}
+          onChange={handleChange}
+        />
+      </form>
+    </div>
   );
 };
 

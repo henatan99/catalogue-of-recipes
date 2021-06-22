@@ -1,23 +1,25 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './routes/Home';
 import NavBar from './components/navBar';
-import MealsPage from './routes/MealsPage';
+import Meals from './containers/meals';
 import SearchInput from './components/searchInput';
-import SearchResultPage from './routes/SearchResultPage';
+import SearchMeals from './containers/searchMeals';
+import Catalogue from './containers/catalogue';
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="container">
         <NavBar />
-        <SearchInput />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/Meals/:id" component={MealsPage} />
-          <Route path="/SearchResult/:id" component={SearchResultPage} />
-        </Switch>
+        <main className="main-container">
+          <SearchInput />
+          <Switch>
+            <Route path="/" exact component={Catalogue} />
+            <Route path="/Meals/:id" component={Meals} />
+            <Route path="/SearchResult/:id" component={SearchMeals} />
+          </Switch>
+        </main>
       </div>
     </Router>
   );

@@ -6,7 +6,7 @@ function MealsPage() {
   const { id } = useParams();
   console.log(id);
   return (
-    <main>
+    <main className="main-container">
       <Meals />
     </main>
   );

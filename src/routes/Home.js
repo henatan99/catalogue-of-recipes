@@ -3,9 +3,9 @@ import Catalogue from '../containers/catalogue';
 
 function Home() {
   return (
-    <main>
+    <div className="main-container">
       <Catalogue />
-    </main>
+    </div>
   );
 }
 

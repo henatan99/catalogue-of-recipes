@@ -11,7 +11,6 @@ const SearchInput = ({ changeFilter }) => {
   const handleSubmit = () => {
     history.push(`/SearchResult/${search}`);
     changeFilter(search);
-    alert(search);
     setSearch('');
   };
 

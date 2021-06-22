@@ -1,5 +1,18 @@
 # Cataloge of Recipes 
 
+This project builds the a catalogue of recipes using create-react-app. It dispalys a browsable list of items that can be filtered and accessed to the details of one item. 
+The webapp has 3 types of pages:
+- one page with a list of items that could be filtered by category.
+- one page for the item details; the meal detail page for meals of same category
+- one page for the item details; the meal detail page for meals of common search key
+
+## Home or Categories Page
+![Screenshot](docs/home.png)
+## Meals of Same Catagory Page
+![Screenshot](docs/category.png)
+## Meals of  Common Search Key
+![Screenshot](docs/search.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

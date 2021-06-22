@@ -19,7 +19,7 @@ const Meals = () => {
       <Meal
         name={meal.strMeal}
         image={meal.strMealThumb}
-        recipes={12}
+        author="Henok"
         key={meal.idMeal}
       />
     ));

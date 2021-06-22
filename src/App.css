@@ -70,12 +70,12 @@ a {
 }
 
 .search-input {
-  width: 98%;
+  width: 96%;
   height: 40px;
   border-radius: 20px;
   appearance: none;
   font-size: 20px;
-  padding: 0 1rem 0 1rem;
+  padding: 0 2% 0 2%;
 }
 
 /* --------------------- */
@@ -106,4 +106,5 @@ a {
 .card-span {
   width: 100%;
   padding-left: 1rem;
+  font-weight: 500;
 }

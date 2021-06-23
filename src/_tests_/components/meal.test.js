@@ -9,7 +9,7 @@ it('renders when no props passed', () => {
 });
 
 it('renders when name props are passed', () => {
-    const tree = create(<Category name="chicken" image="image" author="author" />).toJSON; 
+    const tree = create(<Meal name="chicken" image="image" author="author" />).toJSON; 
     expect(tree).toMatchSnapshot();
 });
   

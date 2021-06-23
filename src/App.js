@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import NavBar from './components/navBar';
 import MealsPage from './routes/MealsPage';
-import SearchInput from './components/searchInput';
+import SearchInput from './containers/searchInput';
 import SearchResultPage from './routes/SearchResultPage';
 
 function App() {

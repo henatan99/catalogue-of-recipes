@@ -7,4 +7,3 @@ it('renders', () => {
     const tree = create(<NavBar />).toJSON;
     expect(tree).toMatchSnapshot();
 });
-

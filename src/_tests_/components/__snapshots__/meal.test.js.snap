@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when name props are passed 1`] = `[Function]`;
+
+exports[`renders when no props passed 1`] = `[Function]`;

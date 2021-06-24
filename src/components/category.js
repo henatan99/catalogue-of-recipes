@@ -18,11 +18,18 @@ const Category = ({
   </Link>
 );
 
+Category.defaultProps = {
+  name: '',
+  image: '',
+  recipes: 0,
+  handleFilterChange: null,
+};
+
 Category.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  recipes: PropTypes.number.isRequired,
-  handleFilterChange: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  recipes: PropTypes.number,
+  handleFilterChange: PropTypes.func,
 };
 
 export default Category;

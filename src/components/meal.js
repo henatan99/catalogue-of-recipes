@@ -17,10 +17,16 @@ const Meal = ({
   </div>
 );
 
+Meal.defaultProps = {
+  name: '',
+  image: '',
+  author: '',
+};
+
 Meal.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  author: PropTypes.number.isRequired,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  author: PropTypes.string,
 };
 
 export default Meal;

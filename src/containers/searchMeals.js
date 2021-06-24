@@ -17,13 +17,17 @@ const SearchMeals = ({ searchName }) => {
       return <h1>loading...</h1>;
     }
 
-    return state.meals.items.map((meal) => (
-      <Meal
-        name={meal.strMeal}
-        image={meal.strMealThumb}
-        key={meal.idMeal}
-      />
-    ));
+    if (state.meals.items) {
+      return state.meals.items.map((meal, index) => (
+        <Meal
+          name={meal.strMeal}
+          image={meal.strMealThumb}
+          key={meal.idMeal || index}
+        />
+      ));
+    }
+
+    return <h1>Sorry, no recipes found with this Keyword!</h1>;
   };
   return (
     <div>{ renderMeals() }</div>

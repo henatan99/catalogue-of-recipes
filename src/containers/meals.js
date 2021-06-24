@@ -15,12 +15,12 @@ const Meals = () => {
       return <h1>loading...</h1>;
     }
 
-    return state.meals.items.map((meal) => (
+    return state.meals.items.map((meal, index) => (
       <Meal
         name={meal.strMeal}
         image={meal.strMealThumb}
         author="Henok"
-        key={meal.idMeal}
+        key={meal.idMeal || index}
       />
     ));
   };

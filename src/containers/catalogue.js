@@ -16,15 +16,19 @@ const Catalogue = ({ changeFilter }) => {
       return <h1>loading...</h1>;
     }
 
-    return state.categories.items.map((category) => (
-      <Category
-        name={category.strCategory}
-        image={category.strCategoryThumb}
-        recipes={5}
-        key={category.idCategory}
-        handleFilterChange={() => changeFilter(category.strCategory)}
-      />
-    ));
+    if (state.categories.items) {
+      return state.categories.items.map((category, index) => (
+        <Category
+          name={category.strCategory}
+          image={category.strCategoryThumb}
+          recipes={5}
+          key={category.idCategory || index}
+          handleFilterChange={() => changeFilter(category.strCategory)}
+        />
+      ));
+    }
+
+    return <h1>Error</h1>;
   };
 
   return (

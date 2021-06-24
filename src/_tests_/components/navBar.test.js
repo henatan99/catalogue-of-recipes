@@ -1,9 +1,16 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom'
 
 import NavBar from '../../components/navBar';
 
-it('renders', () => {
-  const tree = create(<NavBar />).toJSON;
+test('renders ', () => {
+  const jsx = (
+    <BrowserRouter>
+      <NavBar />
+    </BrowserRouter>
+  )
+
+  const tree = create(jsx).toJSON();
   expect(tree).toMatchSnapshot();
 });

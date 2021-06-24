@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when function prop is set to mock function 1`] = `
+<a
+  className="card"
+  href="/Meals/name"
+  onClick={[Function]}
+>
+  <img
+    alt="category-img"
+    className="category-img card-img"
+    src="image"
+  />
+  <div
+    className="card-info"
+  >
+    <h2
+      className="recipe card-title"
+    >
+      name
+    </h2>
+    <span
+      className="recipe-num card-span"
+    >
+      0
+       
+      recipes
+    </span>
+  </div>
+</a>
+`;
+
+exports[`renders when function prop is set to null 1`] = `
+<a
+  className="card"
+  href="/Meals/name"
+  onClick={[Function]}
+>
+  <img
+    alt="category-img"
+    className="category-img card-img"
+    src="image"
+  />
+  <div
+    className="card-info"
+  >
+    <h2
+      className="recipe card-title"
+    >
+      name
+    </h2>
+    <span
+      className="recipe-num card-span"
+    >
+      0
+       
+      recipes
+    </span>
+  </div>
+</a>
+`;
+
+exports[`renders when function prop is set to null 2`] = `
+<a
+  className="card"
+  href="/Meals/name"
+  onClick={[Function]}
+>
+  <img
+    alt="category-img"
+    className="category-img card-img"
+    src="image"
+  />
+  <div
+    className="card-info"
+  >
+    <h2
+      className="recipe card-title"
+    >
+      name
+    </h2>
+    <span
+      className="recipe-num card-span"
+    >
+      0
+       
+      recipes
+    </span>
+  </div>
+</a>
+`;
+
+exports[`renders when mock function prop given 1`] = `
+<a
+  className="card"
+  href="/Meals/name"
+  onClick={[Function]}
+>
+  <img
+    alt="category-img"
+    className="category-img card-img"
+    src="image"
+  />
+  <div
+    className="card-info"
+  >
+    <h2
+      className="recipe card-title"
+    >
+      name
+    </h2>
+    <span
+      className="recipe-num card-span"
+    >
+      0
+       
+      recipes
+    </span>
+  </div>
+</a>
+`;
+
+exports[`renders with no prop 1`] = `
+<a
+  className="card"
+  href="/Meals/name"
+  onClick={[Function]}
+>
+  <img
+    alt="category-img"
+    className="category-img card-img"
+    src="image"
+  />
+  <div
+    className="card-info"
+  >
+    <h2
+      className="recipe card-title"
+    >
+      name
+    </h2>
+    <span
+      className="recipe-num card-span"
+    >
+      0
+       
+      recipes
+    </span>
+  </div>
+</a>
+`;
+
+exports[`some description 1`] = `
+<a
+  className="card"
+  href="/Meals/name"
+  onClick={[Function]}
+>
+  <img
+    alt="category-img"
+    className="category-img card-img"
+    src="image"
+  />
+  <div
+    className="card-info"
+  >
+    <h2
+      className="recipe card-title"
+    >
+      name
+    </h2>
+    <span
+      className="recipe-num card-span"
+    >
+      0
+       
+      recipes
+    </span>
+  </div>
+</a>
+`;

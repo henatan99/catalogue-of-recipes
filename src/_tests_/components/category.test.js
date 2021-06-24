@@ -1,20 +1,45 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom'
 
 import Category from '../../components/category';
 
-it('renders when no props passed', () => {
-  const tree = create(<Category />).toJSON;
+test('renders when function prop is set to null', () => {
+  
+  const props = {
+    name: 'name',
+    image: 'image',
+    recipes: 0,
+    handleFilterChange: null,
+  }
+
+  const jsx = (
+    <BrowserRouter>
+      <Category {...props} />
+    </BrowserRouter>
+  )
+
+  const tree = create(jsx).toJSON();
   expect(tree).toMatchSnapshot();
+
 });
 
-it('renders when name props are passed', () => {
-  const tree = create(<Category name="chicken" image="image" recipes={3} />).toJSON;
-  expect(tree).toMatchSnapshot();
-});
-
-it('renders when handleFilterChange function prop is passed ', () => {
+test('renders when function prop is set to mock function', () => {
   const handleClick = jest.fn();
-  const tree = create(<Category handleFilterChange={handleClick} />).toJSON;
+  const props = {
+    name: 'name',
+    image: 'image',
+    recipes: 0,
+    handleFilterChange: handleClick,
+  }
+
+  const jsx = (
+    <BrowserRouter>
+      <Category {...props} />
+    </BrowserRouter>
+  )
+
+  const tree = create(jsx).toJSON();
   expect(tree).toMatchSnapshot();
-});
+
+})

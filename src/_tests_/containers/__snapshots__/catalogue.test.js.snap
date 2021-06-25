@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Catalogue should match with snapshot 1`] = `<div />`;
+
+exports[`My Connected React-Redux Component should render with given state from Redux store 1`] = `
+<div>
+  <h1>
+    loading...
+  </h1>
+</div>
+`;

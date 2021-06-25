@@ -2,9 +2,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import AdminItemList from '../../components/AdminItemList';
-import createTestStore from '../fixtures/createTestStore';
-describe('AdminItemList', () => {
+import Meal from '../../containers/searchMeals';
+import createTestStore from './testStore';
+describe('Meal', () => {
   let store;
   beforeEach(() => {
     store = createTestStore();
@@ -14,7 +14,7 @@ describe('AdminItemList', () => {
       .create(
         <Provider store={store}>
           <MemoryRouter>
-            <AdminItemList />
+            <Meal />
           </MemoryRouter>
         </Provider>,
       ).toJSON();

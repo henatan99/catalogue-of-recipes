@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders  1`] = `
+<nav
+  className="nav-bar"
+>
+  <ul
+    className="nav-items"
+  >
+    <li>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="nav-item"
+    >
+      nomnom
+    </li>
+    <li
+      className="nav-item"
+    >
+      <span
+        className="iconify"
+        data-icon="carbon:user-avatar-filled-alt"
+        data-inline="false"
+      />
+    </li>
+  </ul>
+</nav>
+`;

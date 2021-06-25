@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Catalogue from '../../containers/catalogue';
 import createTestStore from './testStore';
+
 describe('Catalogue', () => {
   let store;
   beforeEach(() => {

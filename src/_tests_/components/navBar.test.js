@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 
 import NavBar from '../../components/navBar';
 
@@ -9,7 +9,7 @@ test('renders ', () => {
     <BrowserRouter>
       <NavBar />
     </BrowserRouter>
-  )
+  );
 
   const tree = create(jsx).toJSON();
   expect(tree).toMatchSnapshot();

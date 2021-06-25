@@ -36,7 +36,7 @@ const SearchMeals = ({ searchName }) => {
 
 SearchMeals.defaultProps = {
   searchName: '',
-}
+};
 
 SearchMeals.propTypes = {
   searchName: PropTypes.string,

@@ -34,7 +34,7 @@ const SearchInput = ({ changeFilter }) => {
 
 SearchInput.defaultProps = {
   changeFilter: null,
-}
+};
 
 SearchInput.propTypes = {
   changeFilter: PropTypes.func,

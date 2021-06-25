@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import SearchInput from '../../containers/searchInput';
 import createTestStore from './testStore';
+
 describe('SearchInput', () => {
   let store;
   beforeEach(() => {

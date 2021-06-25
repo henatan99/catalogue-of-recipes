@@ -38,7 +38,7 @@ const Catalogue = ({ changeFilter }) => {
 
 Catalogue.defaultProps = {
   changeFilter: null,
-}
+};
 
 Catalogue.propTypes = {
   changeFilter: PropTypes.func,

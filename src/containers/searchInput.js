@@ -32,8 +32,12 @@ const SearchInput = ({ changeFilter }) => {
   );
 };
 
+SearchInput.defaultProps = {
+  changeFilter: null,
+}
+
 SearchInput.propTypes = {
-  changeFilter: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func,
 };
 
 const mapDispatchToProps = (dispatch) => ({

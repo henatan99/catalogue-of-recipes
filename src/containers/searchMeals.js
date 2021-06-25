@@ -34,8 +34,12 @@ const SearchMeals = ({ searchName }) => {
   );
 };
 
+SearchMeals.defaultProps = {
+  searchName: '',
+}
+
 SearchMeals.propTypes = {
-  searchName: PropTypes.string.isRequired,
+  searchName: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({

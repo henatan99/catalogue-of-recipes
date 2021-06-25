@@ -2,9 +2,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import SearchMeals from '../../containers/searchMeals';
+import SearchInput from '../../containers/searchInput';
 import createTestStore from './testStore';
-describe('SearchMeals', () => {
+describe('SearchInput', () => {
   let store;
   beforeEach(() => {
     store = createTestStore();
@@ -14,7 +14,7 @@ describe('SearchMeals', () => {
       .create(
         <Provider store={store}>
           <MemoryRouter>
-            <SearchMeals />
+            <SearchInput />
           </MemoryRouter>
         </Provider>,
       ).toJSON();
